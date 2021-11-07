@@ -12,10 +12,14 @@ public class SnakeLadder {
         int position = 0;
         int dieCheck;
         int optionCheck;
+        int roll=0;
         while(position<UPPER_LIMIT)
         {
+            roll=roll+1;
             dieCheck = ((int)((Math.random())*10)%6)+1;
             optionCheck =(int) ((Math.random())*10)%3;
+            //dieCheck=5;
+            //optionCheck=1;
             switch(optionCheck)
             {
                 case NO_PLAY:
@@ -44,9 +48,10 @@ public class SnakeLadder {
                     }
                     break;
             }
-            System.out.println("Dice Number: " + dieCheck);
-            System.out.println("Option :" + optionCheck);
-            System.out.println("The Position is: " + position);
+            System.out.println("No.of Times Die Rolles: "+roll);
+            System.out.println("Dice Number: "+dieCheck);
+            System.out.println("Option :"+optionCheck);
+            System.out.println("The Position is: "+position);
         }
     }
 }
